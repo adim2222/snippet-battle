@@ -1,22 +1,6 @@
 import './Navbar.css';
 
 const Navbar = () => {
-	const queryString = window.location.search;
-	const urlParams = new URLSearchParams(queryString);
-
-	const codeExchange = async () => {
-		const response = await fetch('http://localhost:5185/authenticate', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				code: urlParams.get('code'),
-			}),
-		});
-		const data = await response.json();
-		console.log(data);
-	};
 
 	const accountAuth = () => {
 		const url = new URL('https://osu.ppy.sh/oauth/authorize');
@@ -34,11 +18,6 @@ const Navbar = () => {
 
 		window.location.href = url;
 	};
-
-	if (urlParams.get('code')) {
-		console.log(urlParams.get('code'));
-		codeExchange();
-	}
 
 	return (
 		<div className='navbar'>

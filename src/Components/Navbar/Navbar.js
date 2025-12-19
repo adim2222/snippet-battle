@@ -5,7 +5,7 @@ const Navbar = () => {
 	const urlParams = new URLSearchParams(queryString);
 
 	const codeExchange = async () => {
-		const response = await fetch('http://localhost:3000/authenticate', {
+		const response = await fetch('http://localhost:5185/authenticate', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

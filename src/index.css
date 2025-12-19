@@ -1,3 +1,33 @@
 body {
   margin: 0;
 }
+
+@font-face {
+  font-family: AllerBold;
+  src: url(Resources/Fonts/Aller_Std_Bd.ttf);
+}
+
+@font-face {
+  font-family: AllerBoldIt;
+  src: url(Resources/Fonts/Aller_Std_BdIt.ttf);
+}
+
+@font-face {
+  font-family: AllerLight;
+  src: url(Resources/Fonts/Aller_Std_Lt.ttf);
+}
+
+@font-face {
+  font-family: AllerLightIt;
+  src: url(Resources/Fonts/Aller_Std_LtIt.ttf);
+}
+
+@font-face {
+  font-family: AllerIt;
+  src: url(Resources/Fonts/Aller_Std_It.ttf);
+}
+
+@font-face {
+  font-family: AllerRg;
+  src: url(Resources/Fonts/Aller_Std_Rg.ttf);
+}

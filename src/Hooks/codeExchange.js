@@ -1,4 +1,9 @@
-const codeExchange = async (urlParams) => {
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+let userToken = null;
+
+if (urlParams.get('code')) {
 	const response = await fetch('http://localhost:5185/authenticate', {
 		method: 'POST',
 		headers: {
@@ -8,10 +13,7 @@ const codeExchange = async (urlParams) => {
 			code: urlParams.get('code'),
 		}),
 	});
-	const data = await response.json();
-	return data;
+	userToken = await response.json();
+}
 
-  
-};
-
-export default codeExchange;
+export default userToken;

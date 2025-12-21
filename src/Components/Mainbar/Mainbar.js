@@ -1,5 +1,5 @@
-import './Mainbar.css';
 import userToken from '../../Hooks/codeExchange';
+import './Mainbar.css';
 
 const Mainbar = () => {
 	return (
@@ -22,6 +22,7 @@ const Mainbar = () => {
 				direct comparison.
 			</p>
 			<p>elo</p>
+			{userToken?.access_token}
 		</div>
 	);
 };

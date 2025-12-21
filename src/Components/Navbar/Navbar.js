@@ -20,10 +20,13 @@ const Navbar = () => {
 		window.location.href = url;
 	};
 
-	if (userToken) {
-		const userData = queryOsuApi("https://osu.ppy.sh/api/v2/me/osu", "GET");
-		console.log(userData)
+	const queryOsu = async () => {
+		if (userToken) {
+			const userData = await queryOsuApi("https://osu.ppy.sh/api/v2/me/osu", "GET");
+			console.log(userData)
+		}
 	}
+	queryOsu();
 
 	return (
 		<div className='navbar'>

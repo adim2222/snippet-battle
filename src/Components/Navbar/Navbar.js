@@ -1,4 +1,6 @@
 import './Navbar.css';
+import userToken from '../../Hooks/codeExchange';
+import queryOsuApi from '../../Hooks/queryOsuApi';
 
 const Navbar = () => {
 	const accountAuth = () => {
@@ -17,6 +19,11 @@ const Navbar = () => {
 
 		window.location.href = url;
 	};
+
+	if (userToken) {
+		const userData = queryOsuApi("https://osu.ppy.sh/api/v2/me/osu", "GET");
+		console.log(userData)
+	}
 
 	return (
 		<div className='navbar'>

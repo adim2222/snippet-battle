@@ -22,7 +22,6 @@ const Mainbar = () => {
 				direct comparison.
 			</p>
 			<p>elo</p>
-			{userToken.access_token}
 		</div>
 	);
 };

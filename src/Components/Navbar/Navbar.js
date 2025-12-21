@@ -1,7 +1,6 @@
 import './Navbar.css';
 
 const Navbar = () => {
-
 	const accountAuth = () => {
 		const url = new URL('https://osu.ppy.sh/oauth/authorize');
 

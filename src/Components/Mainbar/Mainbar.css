@@ -1,0 +1,16 @@
+.Mainbar {
+    position: relative;
+    margin: 0 auto;
+    padding: 5px;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(1, 203, 174);
+}
+.Mainbar h1 {
+    text-align: center;
+}
+
+.Mainbar p {
+    display: block;
+    width: 50%;
+}
